@@ -14,7 +14,7 @@ categories: nodeJS
 
 자, 그럼 시작하기전에 간단한 유머입니다....(원래 이런유머 좋아해서 팀분들이 난처해 하신답니다...)
 
-<img src='../images/20160929_node_bongoose.jpg'/>
+<img src='https://wckhg89.github.io/images/20160929_node_bongoose.jpg'/>
 
 ```
 if ('moongoose' === 'bongoose') {
@@ -67,7 +67,7 @@ app.listen(port , function () {
 });
 ```
 
-<img src='../images/20160929_node_nodemon.jpg'/>
+<img src='https://wckhg89.github.io/images/20160929_node_nodemon.jpg'/>
 
 > 서버가 정상적으로 실행되면 위와 같은 화면이 보이고 해당 서버 주소로 접근시, hello node.js라는 메시지가 보일겁니다.
 
@@ -88,7 +88,7 @@ app.listen(port , function () {
 > ./mongod
 ```
 
-<img src='../images/20160929_node_mongod.jpg'/>
+<img src='https://wckhg89.github.io/images/20160929_node_mongod.jpg'/>
 
 > 잘 실행되었다면 위와 같은 화면이 보일것입니다.
 
@@ -202,12 +202,12 @@ app.listen(port , function () {
 });
 ```
 
-<img src='../images/20160929_node_post.jpg'/>
+<img src='https://wckhg89.github.io/images/20160929_node_post.jpg'/>
 
 > POST 요청으로 name과 eamil을 저장하였습니다.
 
 
-<img src='../images/20160929_node_get.jpg'/>
+<img src='https://wckhg89.github.io/images/20160929_node_get.jpg'/>
 
 > GET 요청으로 저장된 데이터가 잘 조회되는 것을 볼 수 있습니다.
 

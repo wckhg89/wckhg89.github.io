@@ -15,7 +15,7 @@ categories: nodeJS
 
  ## node.js의 내부구조와 내부동작 원리
 <h4>node.js 내부구조</h4>
-<img src='../images/20160929_node_arch.jpg'/>
+<img src='https://wckhg89.github.io/images/20160929_node_arch.jpg'/>
 
 [빨강 상자]
 > node.js는 구글 V8 자바스크립으 엔진을 기본으로 합니다. 이를 기반으로 Single-thread 기반의 Event Loop (libev)가 돌면서 요청을 처리합니다.
@@ -55,18 +55,18 @@ fs.readFile('./bigFile.txt', 'utf8', function(err, data) {
 
  Tomcat과 같은 WAS나 Apache와 같은 일반적인 웹서버는 Mulit Process 또는 Multi Thread 형태를 가지고 있습니다.
 
-<img src='../images/20160929_node_single_thread.jpg'/>
+<img src='https://wckhg89.github.io/images/20160929_node_single_thread.jpg'/>
 
 > 톰켓과 같은 경우는 위의 그림에서 보는것 처럼 Client로 부터 요청이 오면, 미리 만들어놓은 Thread(Thread Pool에 있고, tomcat 설정에서 몇개까지 만들어 놓을지 지정할 수 있습니다...)를 꺼내서 사용하고 요청이 끝나면 다시 Thread Pool 넣어 주는 구조입니다. 그렇기 때문에 동시에 처리할 수 있는 Client 수에 한계가 있습니다.(미리 지정한 thread의 수만큼 동시에 처리 할 수 있겠지요...)
 
-<img src='../images/20160929_node_blocking_io.jpg'/>
+<img src='https://wckhg89.github.io/images/20160929_node_blocking_io.jpg'/>
 
 > 또한 IO 작업을 할때는 (DB...) CPU를 사용하지 않고 Wait 상태로 빠져 CPU를 낭비하게 됩니다.
 
 <h6>Single-thread 모델</h6>
 앞서 언급했던 Multi-thread 모델의 한계를 해결 하기 위한 것이 Single-thread 모델 입니다.
 
-<img src='../images/20160929_node_non_blocking_io.jpg'/>
+<img src='https://wckhg89.github.io/images/20160929_node_non_blocking_io.jpg'/>
 
 Single-thread 모델은 다음과 같이 정의 할 수 있는데요.
 > <font color='red'>하나의 Thread</font>만을 사용해서 여러 Client로부터 오는 Request(요청)를 처리한다.
@@ -76,7 +76,7 @@ Single-thread 모델은 다음과 같이 정의 할 수 있는데요.
 
 이는 node.js도 single-thread만 사용하는 것이 아니라 내부적으로는 multi thread pool을 사용하기는 한다고 합니다.
 
-<img src='../images/20160929_node_thread_pool.jpg'/>
+<img src='https://wckhg89.github.io/images/20160929_node_thread_pool.jpg'/>
 
 
 <h6>Event-driven (Async) Non-blocking IO</h6>
@@ -86,12 +86,12 @@ node.js는 이벤트가 발생하면, 그 이벤트를 받아서 작업을 처�
 
 - Blocking IO (동기식 : sync)
 
-<img src='../images/20160929_node_sync_io.jpg'/>
+<img src='https://wckhg89.github.io/images/20160929_node_sync_io.jpg'/>
 > 먼저 동기식 IO는 위의 그림과 같이 동작합니다. 그림 보면 다 이해 되쥬? (백종원 gem)
 
 - Non-blocking IO (비동기식 : async)
 
-<img src='../images/20160929_node_async_io.jpg'/>
+<img src='https://wckhg89.github.io/images/20160929_node_async_io.jpg'/>
 > 비동기식 IO는 위 그림처럼 동작합니다.
 
 ---

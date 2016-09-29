@@ -18,15 +18,18 @@ categories: nodeJS
 <img src='https://wckhg89.github.io/images/20160929_node_arch.jpg'/>
 
 - 빨강 상자
+
 > node.js는 구글 V8 자바스크립으 엔진을 기본으로 합니다. 이를 기반으로 Single-thread 기반의 Event Loop (libev)가 돌면서 요청을 처리합니다.
 그림을 보면 Thread Pool (libeio)를 볼 수 있는데 (싱글 스레드인데 스레드 풀!?) 이는 시스템적으로 non-blocking IO를 지원하지 않는 IO 호출이 있는 경우, 이를 비동기 처리 하기 위해 내부의 Thread Pool을 별도 이용하여 차리하도록 되어 있습니다.
 
 
 - 파랑상자
+
 > 빨강상자 위의 파랑상자 영역은 네트워크 프로토콜 (http ...)을 처리하는 socket, http 바인딩 모듈등이 있습니다.
 
 
 - 오렌지 상자
+
 > 마지막 오렌지 상자는 노드 JS의 기본 라이브러리를 말합니다. 노드에서 기본적으로 제공하는 라이브러리(모듈)에는  HTTP, TCP, FS, OS, EVENT 모듈 등이 있습니다.
 노드 기본 라이브러리는 require를 할때에 별도의 경로 지정없이 사용할 수 있습니다.
 

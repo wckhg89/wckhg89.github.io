@@ -5,16 +5,20 @@ date:   2016-09-28 17:55:01 -0500
 comments: true
 categories: nodeJS
 ---
- ## node.js 에 대한 소개
+# node.js 에 대한 소개
 
 <h4>Single-thread & non-blocking IO</h4>
+
  > node.js는 <font color='red'>싱글 스레드 기반</font>으로 동작하는 <font color='red'>non-blocking IO</font>를 지원하는 서버입니다.
 
 <h4>Runnig on v8 engine & event-driven</h4>
+
  > <font color='red'>V8 엔진</font>으로 개발되어 있으며 프로그래밍 언어로는 Javascript를 사용하며 <font color='red'>Event 기반(event-driven)</font>의 프로그래밍 모델을 사용합니다.
 
- ## node.js의 내부구조와 내부동작 원리
+<h2> node.js의 내부구조와 내부동작 원리</h2>
+
 <h4>node.js 내부구조</h4>
+
 <img src='https://wckhg89.github.io/images/20160929_node_arch.jpg'/>
 
 - 빨강 상자
@@ -40,6 +44,7 @@ var http = require('http');
 ...
 http.get('/', function () {...});
 ```
+
 ```
 var fs = require('fs');
 fs.readFile('./bigFile.txt', 'utf8', function(err, data) {
@@ -48,6 +53,7 @@ fs.readFile('./bigFile.txt', 'utf8', function(err, data) {
 ```
 
 <h4>node.js 내부동작 원리</h4>
+
 지금까지 node.js의 내부 구조가 어떻게 되었는지 살펴 보았으니 이제 어떤식으로 동작이 되는지 살펴보려 합니다.
 
 앞서 언급했듯이 node.js는 'single-thread' 기반으로 'event-driven non-blocking IO'를 지원한다고 했는데요. (뭔소리야...?)
@@ -72,6 +78,7 @@ fs.readFile('./bigFile.txt', 'utf8', function(err, data) {
 <img src='https://wckhg89.github.io/images/20160929_node_non_blocking_io.jpg'/>
 
 Single-thread 모델은 다음과 같이 정의 할 수 있는데요.
+
 > <font color='red'>하나의 Thread</font>만을 사용해서 여러 Client로부터 오는 Request(요청)를 처리한다.
 단, IO 작업과 같이 block되는 작업과 같은 경우는 비동기 IO 방식으로 IO 요청을 던져 놓고, 다시 돌아와서 다른 작업을 하다가 IO 작업이 끝나면 이벤트를 받아서 처리하는 구조이다. (그래서 node.js에서는 유독 callback function이 많이 이용되죠...)
 
@@ -83,6 +90,7 @@ Single-thread 모델은 다음과 같이 정의 할 수 있는데요.
 
 
 <h6>Event-driven (Async) Non-blocking IO</h6>
+
 node.js는 이벤트가 발생하면, 그 이벤트를 받아서 작업을 처리합니다. 그렇기 때문에 event-driven 이라고 말합니다. <br>또한 이러한 이벤트 처리가 blocking 되는 작업이 있는 작업이라면(예를들어 DB 작업이라던가...) 이를 비동기적으로 처리해서 blocking 되지 않는 것처럼 하기 때문에 Non-blocking 이라고 합니다.
 
 자, 그러면 blocking IO(동기식:sync)와 Non-blocking(비동기식:async)의 차이를 한번 살펴보겠습니다.
@@ -98,7 +106,9 @@ node.js는 이벤트가 발생하면, 그 이벤트를 받아서 작업을 처�
 > 비동기식 IO는 위 그림처럼 동작합니다.
 
 ---
+
 # 마치며..
+
 지금까지 node.js가 어떤식으로 되어 있는 구조적으로 살펴보았습니다. 사실 이보다 훨씬 복잡한 구조로 되어있을텐데, node.js를 패스트캠퍼스에서 수강하고 있는데 어떤 구조로 동작하는지 정확히 이해하지 못해 와닿는게 조금 부족한 것 같아 간략하게라도 어떤식으로 동작하는지 정리해보았습니다.
 
 node.js의 구조에 대해서는 앞으로도 계속 공부해서 좀 더 상세히 보강할 수 있도록 하려 합니다.

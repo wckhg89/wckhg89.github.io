@@ -7,6 +7,8 @@ comments: true
 ---
 # node.js 에 대한 소개
 
+![zumgu_profie](/images/zumgu_profie.jpg)
+
 <h4>Single-thread & non-blocking IO</h4>
 
  > node.js는 <font color='red'>싱글 스레드 기반</font>으로 동작하는 <font color='red'>non-blocking IO</font>를 지원하는 서버입니다.

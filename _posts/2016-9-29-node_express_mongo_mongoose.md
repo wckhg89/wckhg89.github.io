@@ -7,6 +7,8 @@ categories: nodeJS
 ---
 # node.js (express framewor) + mongoDB (mongoose ODM)
 
+![zumgu_profie](/images/zumgu_profie.jpg)
+
 노드JS (express 프레임워크)와 mongoDB(mongoose ODM)을 이용해서 간단한 REST API를 만들어 보려합니다. 구현해보려는 내용은 아주 간단한데요 아래와 같습니다. (다음번에는 update랑 delete도 해볼게요...ㅠ)
 
 > 1. POST 요청을 통해서 data를 mongoDB에 저장한다 (locathost:4000/get/)

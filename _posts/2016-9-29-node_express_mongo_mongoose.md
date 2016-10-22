@@ -4,6 +4,7 @@ title:  "nodeJS (express Framework) + mongoDB (mongoose ODM)를 이용한 간단
 date:   2016-09-29 17:55:01 -0500
 comments: true
 categories: nodeJS
+fb_title: node_express_mongo_mongoose
 ---
 # node.js (express framewor) + mongoDB (mongoose ODM)
 

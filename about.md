@@ -5,6 +5,6 @@ permalink: /about/
 public: true
 ---
 
-Welcome to this website!
+![zumgu_profie](/images/zumgu_profie.jpg)
 
-> This website is using [laobubu](http://laobubu.net)'s theme: [EasyBook](https://github.com/laobubu/jekyll-theme-EasyBook)
+> 개발이야기를 나눌 수 있는 공간이 되었으면 좋겠습니다. <br/> 감사합니다 :)

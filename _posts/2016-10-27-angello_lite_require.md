@@ -15,7 +15,7 @@ AngularJS 를 공부할 때, 많이들 접하는 서적이 'Angular in Action' �
 
 이번 포스팅에서는 본격적인 Angello 구현에 앞서 가벼운 Angello 버전인 Angello-Lite에 RequireJS를 입혀보았습니다.
 
-책에서는 app.js라는 파일 하나에 모든 기능을 모아 놓고 있어 이것을 분리해보는(모듈화) 것도 좋은 학습 방법이라 생각해서 RequireJS를 통해서 모듈화를 해보았고 그 내용을 포스팅을 통해 정리 해보려합니다. ([깃주소]https://github.com/wckhg89/angello-lite-requirejs에서 샘플코드를 보실 수 있습니다.)
+책에서는 app.js라는 파일 하나에 모든 기능을 모아 놓고 있어 이것을 분리해보는(모듈화) 것도 좋은 학습 방법이라 생각해서 RequireJS를 통해서 모듈화를 해보았고 그 내용을 포스팅을 통해 정리 해보려합니다. ([깃주소](https://github.com/wckhg89/angello-lite-requirejs)에서 샘플코드를 보실 수 있습니다.)
 
 먼저 이번 샘플코드에서는 라이브러리 관리를 위해서 npm을 이용해 보았습니다.
 

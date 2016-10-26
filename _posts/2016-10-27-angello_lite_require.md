@@ -2,7 +2,7 @@
 layout: post
 title:  "Angello-Lite + RequireJS"
 date:   2016-10-27 17:55:01 -0500
-categories: 생각정리
+categories: JS
 fb_title: angello_lite_require
 ---
 # Angello Lite + RequireJS

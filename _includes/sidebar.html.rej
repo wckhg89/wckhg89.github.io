@@ -1,6 +1,0 @@
-diff a/_includes/sidebar.html b/_includes/sidebar.html	(rejected hunks)
-@@ -2,3 +3,4 @@
-+<<<<<<< HEAD
- <div class='wrapper'>
- 
-   <input data-function='swipe' id='swipe' type='checkbox'>

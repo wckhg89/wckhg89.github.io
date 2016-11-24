@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 
+<<<<<<< HEAD
   {% include head.html %}
 
   <body>
@@ -30,4 +31,27 @@
     });
     </script>
 
+=======
+  {% include analytics.html %}
+  {% include head.html %}
+
+  <body>
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="col-main">
+          {{ content }}
+        </div>
+        <div class="col-second">
+          {% include sidebar.html %}
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+>>>>>>> 6b8d8aa1178f6c6c170699e61fa7fa864896c628
 </html>

@@ -2,13 +2,6 @@
 layout: post
 title:  "node.js 에 대해서 알아보려고 합니다."
 date:   2016-09-28 17:55:01 -0500
-<<<<<<< HEAD
-comments: true
-categories: nodeJS
----
-# node.js 에 대한 소개
-
-=======
 categories: nodeJS
 comments: true
 fb_title: what_is_node
@@ -17,7 +10,6 @@ fb_title: what_is_node
 
 ![zumgu_profie](/images/zumgu_profie.jpg)
 
->>>>>>> 6b8d8aa1178f6c6c170699e61fa7fa864896c628
 <h4>Single-thread & non-blocking IO</h4>
 
  > node.js는 <font color='red'>싱글 스레드 기반</font>으로 동작하는 <font color='red'>non-blocking IO</font>를 지원하는 서버입니다.

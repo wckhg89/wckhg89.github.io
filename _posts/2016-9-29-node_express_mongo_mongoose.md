@@ -4,15 +4,6 @@ title:  "nodeJS (express Framework) + mongoDB (mongoose ODM)를 이용한 간단
 date:   2016-09-29 17:55:01 -0500
 comments: true
 categories: nodeJS
-<<<<<<< HEAD
----
-# node.js (express framewor) + mongoDB (mongoose ODM)
-
-노드JS (express 프레임워크)와 mongoDB(mongoose ODM)을 이용해서 간단한 REST API를 만들어 보려합니다. 구현해보려는 내용은 아주 간단한데요 아래와 같습니다. (다음번에는 update랑 delete도 해볼게요...ㅠ)
-
-> 1. POST 요청을 통해서 data를 mongoDB에 저장한다 (locathost:4000/get/)
-2. GET 요청을 통해서 data를 mongoDB에서 가져와서 JSON 형태로 보여준다. (locathost:4000/post/)
-=======
 fb_title: node_express_mongo_mongoose
 ---
 # node.js (express framewor) + mongoDB (mongoose ODM)
@@ -23,7 +14,6 @@ fb_title: node_express_mongo_mongoose
 
 > 1. POST 요청을 통해서 data를 mongoDB에 저장한다 (locathost:4000/get/)
 > 2. GET 요청을 통해서 data를 mongoDB에서 가져와서 JSON 형태로 보여준다. (locathost:4000/post/)
->>>>>>> 6b8d8aa1178f6c6c170699e61fa7fa864896c628
 
 자, 그럼 시작하기전에 간단한 유머입니다....(원래 이런유머 좋아해서 팀분들이 난처해 하신답니다...)
 
@@ -36,24 +26,16 @@ if ('moongoose' === 'bongoose') {
   console.log('stop joke');
 }
 ```
-<<<<<<< HEAD
-=======
 
->>>>>>> 6b8d8aa1178f6c6c170699e61fa7fa864896c628
 작업 환경은 cloud IDE인 c9.io를 이용하겠습니다.
 
 먼저 저는 npm module로 아래와 같이 사용하고자 합니다.
 
 > 1. express module (express framework)
-<<<<<<< HEAD
-2. body-parser module (response에 json형태로 응답을 주려구)
-3. mongoose module (mongoose ODM)
-4. nodemon (global로 설치)
-=======
 > 2. body-parser module (POST 요청 데이터를 추출하는 미들웨어)
 > 3. mongoose module (mongoose ODM)
 > 4. nodemon (global로 설치)
->>>>>>> 6b8d8aa1178f6c6c170699e61fa7fa864896c628
+
 
 먼저 npm init으로 package.json을 만들어서 의존성을 등록하겠습니다.
 이렇게하면 나중에 git에 올릴때 node_module 폴더는 ignore(이근호 선수아닙니다...) 처리해도 좋겠죠?
@@ -155,13 +137,8 @@ app.listen(port , function () {
 });
 ```
 
-<<<<<<< HEAD
-
-=======
 마지막으로 위에서 생성한 모델 (Student)을 이용해서 POST 요청이 갔을때는 데이터의 저장
 GET 요청이 왔을때는 데이터를 조회하는 부분을 추가 해보겠습니다.
->>>>>>> 6b8d8aa1178f6c6c170699e61fa7fa864896c628
-
 
 ```
 var express = require('express');
@@ -198,10 +175,8 @@ app.get('/', function (req, res, next) {
 
 // get 요청으로 DB의 데이터 가져옴
 app.get('/students', function(req, res, next) {
-<<<<<<< HEAD
-=======
+
     // model.find({검색 파라미터 (mongoQuery 문법 사용)}, function ("에러", 응답 받을 collection))
->>>>>>> 6b8d8aa1178f6c6c170699e61fa7fa864896c628
     Student.find({}, function (error, students) {
         if (error) {
             return res.json(error);

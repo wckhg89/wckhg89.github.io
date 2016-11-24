@@ -1,25 +1,5 @@
 # Site settings
 title: 줌구's 난중(개발)일기
-<<<<<<< HEAD
-email: wckhg89@gmail.com
-baseurl: "" # the subpath of your site, e.g. /blog
-#url: "http://yourdomain.com" # the base hostname & protocol for your site
-
-# Sidebar settings
-description: 줌구's 난중(개발)일기
-
-# Social icons
-facebook: honggu.kang.92
-linkedin:
-github: wckhg89
-deviantart:
-codepen:
-
-footer: © zumgu dev blog
-
-# Build settings
-markdown: kramdown
-=======
 url: "https://wckhg89.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
 baseurl: "" # the prefix of your site uri, eg. `/jekyll-theme-EasyBook` or just one slash `/`
 #timezone: Asia/Chongqing
@@ -57,4 +37,3 @@ google_analytics_id: UA-86127470-1
 kramdown:
   input: GFM
   syntax_highlighter: rouge
->>>>>>> 6b8d8aa1178f6c6c170699e61fa7fa864896c628

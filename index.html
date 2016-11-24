@@ -2,33 +2,6 @@
 layout: default
 ---
 
-<<<<<<< HEAD
-
- <div class="post-container">
-
-  <h2 class="post-title">Blog</h2>
-
-  <hr>
-
-  {% for post in site.posts %}
-    <div class ="post-preview">
-      <span class="post-title">
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-          {{ post.title }}
-        </a>
-      </span>
-
-      <span class="post-time">
-        <p>{{ post.date | date: "%b %-d, %Y" }}</p>
-      </span>
-
-
-    </div>
-
-    {% endfor %}
-
-
-=======
 <div class="home">
   <a class="rss-link" href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS Feed</a>
   <h1 class="page-heading">포스팅</h1>
@@ -66,6 +39,5 @@ layout: default
     <span class="next ">NEXT</span>
   {% endif %}
 </div>
->>>>>>> 6b8d8aa1178f6c6c170699e61fa7fa864896c628
 
 </div>

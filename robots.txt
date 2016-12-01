@@ -3,5 +3,5 @@
 
 User-agent: *
 Disallow: /
-Allow: /blog
-Sitemap: https://wckhg89.github.io/blog/_site/sitemap.xml
+Allow: /
+Sitemap: https://wckhg89.github.io/_site/sitemap.xml

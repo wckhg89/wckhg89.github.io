@@ -4,4 +4,4 @@
 User-agent: *
 Disallow: /
 Allow: /
-Sitemap: https://wckhg89.github.io/_site/sitemap.xml
+Sitemap: https://wckhg89.github.io/sitemap.xml

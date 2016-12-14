@@ -6,5 +6,4 @@ categories: SPRING
 fb_title: messageconverter
 ---
 
-스프링에서 @ResponseBody로 JSON 응답을 줄 때, Jackson Converter를 커스터마이징 하는
-방법에 대해서 포스팅 합니다.
+스프링에서 @ResponseBody로 JSON 응답을 줄 때, Jackson Converter를 커스터마이징 하는 방법에 대해서 포스팅 합니다.

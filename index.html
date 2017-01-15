@@ -8,10 +8,8 @@ layout: default
 
   <ul class="post-list">
     {% for post in paginator.posts %}
-      {% if post.fb_title contains "java_day" %}
-      {% else %}
+      {% if !post.categories contains "교육" %}
       <li>
-        {{post.categories}}!@
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>

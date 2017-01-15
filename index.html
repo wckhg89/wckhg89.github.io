@@ -8,7 +8,8 @@ layout: default
 
   <ul class="post-list">
     {% for post in paginator.posts %}
-      {% if !post.categories contains "교육" %}
+      {% if post.categories contains "교육" %}
+      {% else %}
       <li>
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>

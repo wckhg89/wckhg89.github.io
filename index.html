@@ -10,6 +10,7 @@ layout: default
     {% for post in paginator.posts %}
       {% if post.categories != "교육" %}
       <li>
+        {{post.categories}}
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>

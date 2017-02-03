@@ -69,6 +69,7 @@ Criteria API의 기본적인 사용법은 위의 코드와 같습니다.
 Criteria API는 앞서 말씀드린것 처럼 쿼리를 객체지향적으로 작성할 수 있는 장점을 가지고 있습니다. 그러나 API형태로 제공되어지고 있기때문에, 직접 쿼리를 작성하는데 비해서 한계점을 가지고 있습니다.
 
 ``` java
+
 @Repository
 public class ContentRepository {
 
@@ -76,7 +77,8 @@ public class ContentRepository {
 
     @Autowired
     SessionFactory sessionFactory;
-@SuppressWarnings("unchecked")
+
+    @SuppressWarnings("unchecked")
     public List<Content> getContentsWhereIn (List<Long> ids) {
         Session session = sessionFactory.getCurrentSession();
         Criteria criteria = session.createCriteria(Content.class)
@@ -87,6 +89,10 @@ public class ContentRepository {
 
         return contents;
     }
+
+    ...
+
+}
 
 ```
 

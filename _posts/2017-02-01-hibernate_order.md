@@ -12,6 +12,13 @@ fb_title: hibernate_orders
 
 자바 웹 개발 현업 에서는 DB Access 작업시 크게 두가지 프레임워크를 사용하고 있습니다. 첫번째는 QueryMapper 프레임워크입니다. MyBatis, Ibatis가 대표적인것으로 알고있습니다. 그리고 두번째는 ORM 프레임워크입니다. 대표적으로 Hibernate, Eclipse Link등의 프레임워크가 있습니다.
 
+``` shell
+
+consloe.log (!!)
+hello world
+
+```
+
 아직 한국의 많은 회사는 QueryMapper 형태의 프레임워크를 많이 사용하고 있습니다. 그 이유는 ORM이 러닝커프가 높기 때문으로 알고있습니다.
 
 그러나 러닝커프가 높은 만큼 ORM을 사용함으로 인해서 얻을 수 있는 장점이 많습니다.

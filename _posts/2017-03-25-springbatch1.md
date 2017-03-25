@@ -252,3 +252,14 @@ public class Step2Reader extends SuperStepExecution<Member> implements ItemReade
 따라서 공유하고자하는 데이터의 크기가 클 경우에는 데이터 사이즈를 초과하는 에러등 여러가지 이슈가 발생 할 수 있습니다.
 
 다음 포스팅에서는 이러한 이슈를 대응하고자 Batch Schema를 커스터마이징 하는 과정에 대해서 글을 써보고자 합니다.
+
+
+---
+
+## 참고 문서
+
+* http://docs.spring.io/spring-batch/trunk/reference/html/patterns.html#passingDataToFutureSteps
+
+* http://stackoverflow.com/questions/32736377/spring-batch-pass-data-between-reader-and-writer
+
+* http://stackoverflow.com/questions/21241683/spring-batch-beforestep-does-not-work-with-stepscope

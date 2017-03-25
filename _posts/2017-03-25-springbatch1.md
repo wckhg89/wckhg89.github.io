@@ -23,10 +23,14 @@ Step 간의 데이터를 공유하는 과정에서 StepExecution을 이용하여
 
 이번에 경험한 삽질을 총 3번의 포스팅을 통해서 기록으로 남기고자 합니다.
 
-오늘 포스팅에서는 첫번째 내용으로 스프링 배치에서 Step 간의 데이터 공유에 대해서 포스팅을 하고자 합니다.
-그리고 두번째 내용으로는 Batch Schema를 커스터마이징하는 방법에 대해서 포스팅 하고자 합니다.
-마지막으로 세번째 내용은 StepExecution을 사용함으로 인해서 Batch Meta-data를 저장하면서 성능이슈(Meta-data를 저장하며 Serialize 및 DB IO로 인한 성능 저하 이슈)가 발생하는 현상과 StepExecution을 이용하지 않고 Step간의 데이터를 공유하는 방법을 포스팅하려 합니다.
+오늘 포스팅에서는 ``첫번째 내용``으로 스프링 배치에서 Step 간의 데이터 공유에 대해서 포스팅을 하고자 합니다.
+그리고 ``두번째 내용``으로는 Batch Schema를 커스터마이징하는 방법에 대해서 포스팅 하고자 합니다.
+마지막으로 ``세번째 내용``은 StepExecution을 사용함으로 인해서 Batch Meta-data를 저장하면서 성능이슈(Meta-data를 저장하며 Serialize 및 DB IO로 인한 성능 저하 이슈)가 발생하는 현상과 StepExecution을 이용하지 않고 Step간의 데이터를 공유하는 방법을 포스팅하려 합니다.
 
 > 1. Spring Batch StepExecution을 이용한 Step간의 데이터 공유  
   2. Spring Batch Schema Customizing 방법  
   3. StepExecution을 이용함으로 나타나는 성능이슈 및 StepExecution을 이용하지 않는 Step간 데이터 공유
+
+# 프로젝트 구조
+
+예제 소스는 [깃주소](https://github.com/wckhg89/spring-batch-practice)에서 확인하실 수 있습니다.

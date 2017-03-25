@@ -240,9 +240,6 @@ public class Step2Reader extends SuperStepExecution<Member> implements ItemReade
 
 그리고 실제 read에서는 해당 회원이 작성한 작성글 정보를 가져오고 있습니다.
 
----
-
-
 # 마치며
 
 지금까지 살펴본 코드와 같이 step들 간에 데이터 공유가 이루어 질 수 있습니다.
@@ -254,9 +251,7 @@ public class Step2Reader extends SuperStepExecution<Member> implements ItemReade
 다음 포스팅에서는 이러한 이슈를 대응하고자 Batch Schema를 커스터마이징 하는 과정에 대해서 글을 써보고자 합니다.
 
 
----
-
-## 참고 문서
+### 참고 문서
 
 * http://docs.spring.io/spring-batch/trunk/reference/html/patterns.html#passingDataToFutureSteps
 

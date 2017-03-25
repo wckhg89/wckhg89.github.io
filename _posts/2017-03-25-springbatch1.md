@@ -34,3 +34,19 @@ Step 간의 데이터를 공유하는 과정에서 StepExecution을 이용하여
 # 프로젝트 구조
 
 예제 소스는 [깃주소](https://github.com/wckhg89/spring-batch-practice)에서 확인하실 수 있습니다.
+
+먼저 시나리오는 하나의 ``job`` 이 ``step1``과 ``step2``를 가지고 있습니다.
+
+``step1``은 Step1Reader가 회원들을 조회해 와서 Step1Processor에 넘겨주게 됩니다. Step1Processor는 회원 목록중 첫번째 회원을 ``StepExecution``의 ``ExecutionContext``에 저장해 줍니다.
+
+![step1](../images/step1.jpg)
+
+> Step1 클래스 다이어그램
+
+``step2``의 Step2Reader에서는 첫번째 회원을 ``step1``에서 저장한 첫번째 회원을 ``ExecutionContext``에서 가져와서 첫번째 회원이 작성한 첫번째 게시물을 Step2Processor에 넘겨줍니다.
+
+Step2Processor에서는 첫번째 게시물을 수정하여 Step2Writer에 넘겨주고 Step2Writer에서는 변경된 내용을 DB에 저장해주는 시나리오로 예제를 구성했습니다.
+
+![step2](../images/step2.jpg)
+
+> Step2 클래스 다이어그램

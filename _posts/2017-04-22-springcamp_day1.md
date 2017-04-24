@@ -160,3 +160,24 @@ fb_title: springcamp_day1
     - 비동기 작업과 API 호출이 많은 @MVC 앱이라면
       - @MVC
       - AsyncTemplate + 논블록킹 IO 라이브러리
+
+
+# Session 3. Spring-WebFlux
+
+- 용도
+  - 비동기 - 논블록킹 리액티브 개발에 사용
+  - 효율적으로 동작한느 고성능 웹 어플리케이션 개발
+
+- 2가지 개발 방식 지원
+  - @MVC 방식
+  - 새로운 함수형 모델 (RouterFunction / HandlerFunction)
+
+- 서블릿 기반이 아니다 (HttpServletRequest, HttpServletResponse 사용하지 않음)
+  - ServerRequest / ServerResponse
+
+- 지원 웹서버 / 컨테이너
+  - Servlet (Tomcat / Jetty ...)
+  - Netty / Underow (비동기 논블록킹 IO 웹서버)
+
+- 스프링이 웹 요청을 처리하는 방식
+  - 요청 매핑 -> 요청 바인딩 -> 핸들러 실행 -> 핸들러 결과 처리

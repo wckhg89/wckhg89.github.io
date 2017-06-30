@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "스프링 배치(스프링 Boot 기반)삽질기 3탄 - 싱글톤 빈을 이용한 step간 데이터 공유"
-date:   2017-05-09 08:40:00 -0500
+date:   2017-06-26 08:40:00 -0500
 categories: SPRING
 fb_title: springbatch3
 ---

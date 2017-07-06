@@ -8,7 +8,7 @@ layout: default
 
   <ul class="post-list">
     {% for post in paginator.posts %}
-    {% if post.categories != "교육" %}
+    {% if post.categories == "교육" %}
     {{post.categories}}
       <li>
         <h2>

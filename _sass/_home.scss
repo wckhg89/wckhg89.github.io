@@ -1,6 +1,6 @@
 .home {
 .page-heading {
-	font-size:40px;
+	font-size:25px;
 	font-weight: normal;
 	margin: 20px;
     @include media-query($on-palm) {
@@ -16,7 +16,7 @@
     background: #fff;
     font-size: 0.7 * $base-font-size;
     padding: 1px 8px;
-    
+
     &:hover, &:focus {
         color: #666;
     }

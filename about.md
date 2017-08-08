@@ -16,9 +16,9 @@ Web Developer
 
 &nbsp;&nbsp; Phone : 010-6414-9810 <br/>
 &nbsp;&nbsp; Email : wckhg89@gmail.com <br/>
-&nbsp;&nbsp; Blog : https://wckhg89.github.io <br/>
-&nbsp;&nbsp; Github : https://github.com/wckhg89 <br/>
-&nbsp;&nbsp; Facebook : https://www.facebook.com/honggu.kang.92
+&nbsp;&nbsp; Blog : [https://wckhg89.github.io](https://wckhg89.github.io) <br/>
+&nbsp;&nbsp; Github : [https://github.com/wckhg89](https://github.com/wckhg89) <br/>
+&nbsp;&nbsp; Facebook : [https://www.facebook.com/honggu.kang.92](https://www.facebook.com/honggu.kang.92)
 
 Skills
 -------

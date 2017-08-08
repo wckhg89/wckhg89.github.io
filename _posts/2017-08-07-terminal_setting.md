@@ -125,7 +125,7 @@ zsh 5.3.1 (x86_64-apple-darwin16.6.0)
 - ``~/.vimrc``설정 파일에 아래 문구를 붙여넣어 줍니다.
 
 
-
+    ```
     "The following three lines map Ctrl+s to save in vi.  You can comment
     "these out, it has nothing to do with syntax highlighting or colors.
 
@@ -205,7 +205,7 @@ zsh 5.3.1 (x86_64-apple-darwin16.6.0)
     "I like the vertical bar on insert mode, others do not like.  You decide.
     "let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
     "let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
-
+    ```
 
 
 - ``~/.zshrc``설정 파일에 아래 문구를 붙여 넣습니다.

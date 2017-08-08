@@ -36,6 +36,6 @@ markdown: kramdown
 
 google_analytics_id: UA-86127470-1
 
-# kramdown:
-#   input: GFM
-#   syntax_highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge

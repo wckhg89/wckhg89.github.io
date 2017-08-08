@@ -316,4 +316,4 @@ TERM=xterm-256color
 - iterm2 다운로드 링크 : [https://www.iterm2.com/downloads.html](https://www.iterm2.com/downloads.html)
 - homebrew 설치 가이드 링크 : [https://brew.sh/index_ko.html](https://brew.sh/index_ko.html)
 - oh-my-zsh 링크 : [https://github.com/robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-- 꿈 낳은 개발자가 되자 블로그 : [https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md]https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md
+- 꿈 낳은 개발자가 되자 블로그 : [https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)

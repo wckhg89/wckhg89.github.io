@@ -31,12 +31,8 @@ gems:
 paginate: 5
 paginate_path: "page:num"
 
-markdown: redcarpet
-highlighter: pygments
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
-# highlighter: rouge
-# markdown: kramdown
+highlighter: rouge
+markdown: kramdown
 
 google_analytics_id: UA-86127470-1
 

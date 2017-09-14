@@ -123,7 +123,18 @@ They are the two major branches of Jackson, and also the two versions of differe
 
 # com.fasterxml.jackson.core의 의존성
 
-https://github.com/FasterXML/jackson
+fasterxml.jackson의 의존성은 크게 3가지를 가지고 있습니다.
+
+> Core modules
+  Core modules are the foundation on which extensions (modules) build upon. There are 3 such modules currently (as of Jackson 2.x):
+  - Streaming (docs) ("jackson-core") defines low-level streaming API, and includes JSON-specific implementations
+  - Annotations (docs) ("jackson-annotations") contains standard Jackson annotations
+  - Databind (docs) ("jackson-databind") implements data-binding (and object serialization) support on streaming package; it depends both on streaming and annotations packages
+
+[[출처](https://github.com/FasterXML/jackson)] Jackson Project Home @github
+
+``jackson-core``, ``jackson-annotations`` 모듈 그리고 jackson-databind 모듈입니다. 각각의 역할을 위의 출처를 참고하시면 될 것 같습니다.
+중요한점은 마지막 모듈인 ``jackson-databind`` 모듈이 상위 2가지 모듈의 의존성을 포함하기 때문에, 웬만하면 ``jackson-databind`` 모듈 의존성만 추가해주시면 됩니다.
 
 # spring boot 기반에서의 com.fasterxml.jackson.core 세팅
 

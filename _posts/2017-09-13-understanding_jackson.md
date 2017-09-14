@@ -133,7 +133,7 @@ fasterxml.jackson의 의존성은 크게 3가지를 가지고 있습니다.
 
 [[출처](https://github.com/FasterXML/jackson)] Jackson Project Home @github
 
-``jackson-core``, ``jackson-annotations`` 모듈 그리고 jackson-databind 모듈입니다. 각각의 역할을 위의 출처를 참고하시면 될 것 같습니다.
+``jackson-core``, ``jackson-annotations`` 모듈 그리고 ``jackson-databind`` 모듈입니다. 각각의 역할을 위의 출처를 참고하시면 될 것 같습니다.
 중요한점은 마지막 모듈인 ``jackson-databind`` 모듈이 상위 2가지 모듈의 의존성을 포함하기 때문에, 웬만하면 ``jackson-databind`` 모듈 의존성만 추가해주시면 됩니다.
 
 # spring boot 기반에서의 com.fasterxml.jackson.core 세팅
@@ -178,7 +178,7 @@ fasterxml.jackson의 의존성은 크게 3가지를 가지고 있습니다.
 
     <dependency>
         <groupId>com.fasterxml.jackson.core</groupId>
-	<artifactId>jackson-annotations</artifactId>
+         <artifactId>jackson-annotations</artifactId>
         <version>2.9.0</version>
     </dependency>
 

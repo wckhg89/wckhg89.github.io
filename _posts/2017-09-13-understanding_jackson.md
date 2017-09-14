@@ -138,6 +138,10 @@ fasterxml.jackson의 의존성은 크게 3가지를 가지고 있습니다.
 
 # spring boot 기반에서의 com.fasterxml.jackson.core 세팅
 
+> [[깃주소](https://github.com/wckhg89/jackson_sample)]를 참고하시면 아래의 과정을 포함한 프로젝트 전체 소스가 있습니다.
+
+<br/>
+
 먼저 추가해주어야 하는 의존성을 살펴보면 아래와 같습니다.
 
 ```xml

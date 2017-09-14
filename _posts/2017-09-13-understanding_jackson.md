@@ -36,7 +36,7 @@ public class JacksonController {
 
 > 사용자의 요청이 오면 등록된 ``ViewResolver``를 통해 서버 템플릿을 하여 사용자에게 text/html 타입의 응답을 보내주게됩니다.
 
-
+<br/>
 ```java
 @Controller
 public class IndexController {
@@ -57,7 +57,7 @@ public class IndexController {
 
 > 사용자의 요청이 오면 등록된 ``MessageConverter``를 통해서 application/json, text/plain 등 알맞은 형태의 읍답형태로 리턴되게 됩니다.
 
-
+<br/>
 ```java
 @RestController
 @RequestMapping("/students")
@@ -102,10 +102,12 @@ public class StudentRestController {
 
 # org.codehaus.jackson VS com.fasterxml.jackson.core
 
-설정 세팅에 들어가기 앞서 json 형태의 Http 응답으로 바꿔주기 위한 라이브러리가 2가지가 존재합니다.
+설정 세팅에 들어가기 앞서 json 형태의 Http 응답으로 바꿔주기 위한 라이브러리는 대표적으로 2가지가 존재합니다.
 
 첫번째는 ``org.codehaus.jackson``이고 두번째는 ``com.fasterxml.jackson.core``입니다.
+
 결론부터 말씀드리면 ``com.fasterxml.jackson.core`` 라이브러리를 사용해야 한다는 것입니다. ``org.codehaus.jackson``는 관리가 안되고 있는 라이브러리이며 그에 반해, ``com.fasterxml.jackson.core``는 현재까지도 꾸준히 관리되는 라이브러리이기 때문에 후자의 라이브러리를 사용하기를 권장합니다.
+
 (포스팅에서도 ``com.fasterxml.jackson.core`` 라이브러리를 사용하여 설명을 진행하겠습니다. 만일 진행하시고 계시는 프로젝트의 버전이 오래되어 codehaus 라이브러리를 사용하시고 계시다면 fasterxml 라이브러리 또한 2.4 버전까지는 자바 1.6까지 지원이 가능하니 마이그레이션을 권장합니다.)
 
 > Support for oldest Android versions (2.x) will not be continued, as **Jackson modules may use full feature set of JDK 1.6.**

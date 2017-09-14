@@ -2,7 +2,7 @@
 layout: post
 title:  "How to work SPRING @RestController (Jackson)"
 date:   2017-09-13 11:58:01 -0500
-categories: 개발도구
+categories: SPRING
 fb_title: understanding_jackson
 ---
 
@@ -138,23 +138,119 @@ fasterxml.jackson의 의존성은 크게 3가지를 가지고 있습니다.
 
 # spring boot 기반에서의 com.fasterxml.jackson.core 세팅
 
-https://springframework.guru/jackson-dependency-issue-spring-boot-maven/
+먼저 추가해주어야 하는 의존성을 살펴보면 아래와 같습니다.
 
-# 어떻게 동작하는가 (샘플코드로 가이드)
+```xml
+<!-- pom.xml -->
+...
+<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<!-- 명시적으로 jackson 의존성을 주고 싶어서 스타터에 있는 의존성 제거 -->
+			<exclusions>
+				<exclusion>
+					<artifactId>jackson-core</artifactId>
+					<groupId>com.fasterxml.jackson.core</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jackson-annotations</artifactId>
+					<groupId>com.fasterxml.jackson.core</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jackson-databind</artifactId>
+					<groupId>com.fasterxml.jackson.core</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 
-- 제이슨 내려줄 샘플 서버 (노드)
-https://github.com/wckhg89/node_server_for_jackson_exmple
 
-- 테스트 코드 기반으로 rest flow 태워보는 샘플
-https://github.com/wckhg89/jackson_sample
+    <!-- 사실 부트 스타터 웹에 포함되어 있으나 포스팅 샘플이니 명시하자-->
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>2.9.0</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+	<artifactId>jackson-annotations</artifactId>
+        <version>2.9.0</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.9.0</version>
+        <!-- 잭슨 코어 및 어노테이션과 버전 호환성 이슈가 있어 명시적으로 의존성 추가 -->
+        <!-- ref : https://dzone.com/articles/jackson-dependency-issue-in-spring-boot-with-maven-->
+        <exclusions>
+            <exclusion>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+            </exclusion>
+            <exclusion>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+            </exclusion>
+        </exclusions>
+    </dependency>
+    ...
+</dependencies>
+...
+```
+
+사실 ``spring-boot-starter-web``을 의존성을 추가하면 기본적으로 ``jackson-databind`` 의존성이 추가되어 추가적인 설정이 필요 없습니다.
+저는 어떤 의존성이 필요한지 명시하기위해 ``spring-boot-starter-web``의존성에서 jackson 관련 의존성을 제외하고 새롭게 추가하여 설정했습니다.
+
+pom.xml을 살펴보면 ``jackson-databind`` 의존성이 ``jackson-core``, ``jackson-annotations`` 의존성을 가지고 있는데 굳이 다시 추가하게 된 이유는
+버저닝 이슈가 발생하여 버전을 맞춰주기 위해서 추가를 하게 되었습니다. (``jackson-databind`` 의존성이 들고 있는 나머지 2개의 의존성의 버전이 낮아서 이슈가 발생했습니다.)
+
+자세한 내용은 아래 링크를 참고하시면 도움이 되실 것 같습니다.
+
+[[jackson의존성 버저닝이슈](https://springframework.guru/jackson-dependency-issue-spring-boot-maven/)] JACKSON DEPENDENCY ISSUE IN SPRING BOOT WITH MAVEN BUILD
+
+사용할 의존성을 모두 추가했으니 이어서 Bean 설정을 해주면 될 것 같습니다.
+설정 코드는 아래와 같습니다.
+
+```java
+@Configuration
+public class RestConfig {
+
+    // MappingJackson2HttpMessageConverter 에 등록될 ObjectMapper
+    // Java 객체를 Json 객체로 바꿔주는 역할을 수행
+    @Bean
+    public ObjectMapper objectMapper () {
+        return new ObjectMapper();
+    }
+
+
+    // @ResponseBody 어노테이션에 의해서 불리기 되며 ObjectMapper를 이용해서 Java 객체를 Json 객체로 변환 해준다.
+    @Bean
+    public MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter (ObjectMapper objectMapper) {
+        MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter
+                = new MappingJackson2HttpMessageConverter();
+        mappingJackson2HttpMessageConverter.setObjectMapper(objectMapper);
+
+        return mappingJackson2HttpMessageConverter;
+    }
+}
+```
+
+위의 설정 코드와 같이 설정을 해주게 되면 JSON 형태의 응답을 보낼때, ``MappingJackson2HttpMessageConverter``에 등록된 ``ObjectMapper``에 의해서 JSON 형태로 변환된 응답이 보내지게 됩니다.
 
 # 마치며
 
+이번 포스팅에서는 @RestController 어노테이션에 의해서 JSON 형태의 HTTP Response가 내려질때, 어떤식으로 동작하며 어떤 의존성을 추가하여 설정해야 하는지 간략히 정리해봤습니다.
+
+다음번 글의 작성할때는 반대로 외부 서버에서 JSON 형태의 객체를 JAVA 객체로 변환하는 과정에대해서 정리를 하려합니다.
+
+글을 보시다가 제가 잘못이해하고 있는 부분이나 불필요한 내용등이 있으면 편하게 말씀해주시면 감사하겠습니다.
 
 ## 참고링크
 
-http://mkil.tistory.com/204
+[@ResponseBody와 jackson 이용하여 JSON 사용하기](http://mkil.tistory.com/204)
 
-http://www.nextree.co.kr/p11205/
+[SpringMVC에서 Ajax와 JSON](http://www.nextree.co.kr/p11205/)
 
-http://highcode.tistory.com/24
+[Restful한 스프링 @ResponseBody vs @RestController](http://highcode.tistory.com/24)

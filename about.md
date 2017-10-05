@@ -63,6 +63,10 @@ Experience
 ### Kakao Corp
 2017.07.31 ~ 현재 <br/>
 
+* 다음자동차 사진전 플랫폼 이관 작업
+  - 기존 구축된 사진전 플랫폼을 '다음 자동차' 서비스에서도 운영할 수 있도록 이관 작업진행
+  - 페라리 70주년 사진전 오픈 (http://auto.daum.net/exhibition/auto/ferrari70/index.daum)
+
 ### ZUMInternet
 2015.9.7 ~ 2017.07.21 (1년 10개월) <br/>
 포털서비스 zum.com에서 '뉴스줌' 이라는 뉴스 서비스를 중점적으로 맡아서 진행했습니다.

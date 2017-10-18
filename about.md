@@ -48,6 +48,10 @@ Skills
 * MySQL
 * Redis
 
+### Infra
+* Docker
+* Mesos / Marathon Framework
+* Jenkins
 
 ### Etc
 * Git / Github / Gitlab
@@ -63,8 +67,11 @@ Experience
 ### Kakao Corp
 2017.07.31 ~ 현재 <br/>
 
-* 다음자동차 사진전 플랫폼 이관 작업
-  - 기존 구축된 사진전 플랫폼을 '다음 자동차' 서비스에서도 운영할 수 있도록 이관 작업진행
+* 다음 자동차 통계 정리 작업
+  - 보다 정확한 통계를 추출하기 위해 서비스 전반적으로 통계 정리 작업 진행
+  
+* 다음 자동차 사진전 플랫폼 이관 작업
+  - 기존 구축된 사진전 플랫폼을 '다음 자동차' 서비스에서도 운영할 수 있도록 이관 작업 진행
   - 페라리 70주년 사진전 오픈 (http://auto.daum.net/exhibition/auto/ferrari70/index.daum)
 
 ### ZUMInternet

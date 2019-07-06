@@ -1,5 +1,5 @@
 # Site settings
-title: Guppy's 난중(개발)일기
+title: 구피개발일기
 url: "https://wckhg89.github.io"    # the protocol and hostname of your site, eg. `http://laobubu.github.io`
 baseurl: "" # the prefix of your site uri, eg. `/jekyll-theme-EasyBook` or just one slash `/`
 #timezone: Asia/Chongqing
@@ -9,8 +9,8 @@ description: >
 # Your information
 email: wckhg89@gmail.com
 author: Guppy
-avatar: "https://wckhg89.github.io/images/profile_hong.jpeg"
-profile: 포털서비스를 개발하는 웹개발자 입니다 감사합니다 :)
+avatar: "https://wckhg89.github.io/images/woowa_guppy.jpg"
+profile: 커머스개발자 입니다 감사합니다 :)
 #twitter_username: twitter_username
 github_username:  wckhg89
 tistory_username:  wckhg89

@@ -24,8 +24,8 @@ $color-link-hover: #069;
 
 $header-bg: #5DBCD2;
 $header-bg-hover: #47ceed;
-$header-link: #000000;
-$header-fg: #000000;
+$header-link: #FFFFFF;
+$header-fg: #FFFFFF;
 
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
